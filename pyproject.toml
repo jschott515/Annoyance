@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "annoyance"
+version = "0.1.0"
+description = "An annoyance"
+requires-python = ">=3.11"
+authors = [
+    {name = "jschott", email = "jschott515@gmail.com"},
+]
+dependencies = [
+    "win10toast>=0.9",
+]
+
+[project.urls]
+Homepage = "https://github.com/jschott515/Annoyance"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["annoyance"]
+
+[tool.setuptools.package-data]
+"annoyance" = ["icons/*.ico"]
+
+[project.gui-scripts]
+annoyance = "annoyance.main:main"
